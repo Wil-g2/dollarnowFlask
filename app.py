@@ -8,13 +8,13 @@ def index():
     return app.send_static_file("base.html")'''
 
 @app.route('/')
-@app.route('/dolar', methods = ['GET'])
+@app.route('/dolar', methods = ['GET','POST'])
 def dolar():
     req = requests.get('https://economia.awesomeapi.com.br/USD-BRL/');
     data = req.json()
     return render_template('base.html', dolar = data[0]['ask'], moeda = 'dolar')
 
-@app.route('/euro', methods = ['GET'])
+@app.route('/euro', methods = ['GET','POST'])
 def euro():
     req = requests.get('https://economia.awesomeapi.com.br/EUR-BRL/');
     data = req.json()
