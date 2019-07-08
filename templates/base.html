@@ -26,7 +26,7 @@
                 {% if moeda == 'dolar'%}
                     <img src="public/img/tiosam.jpg" class="figure-img img-fluid rounded" alt="..." >
                 {%else%}
-                    <img src="public/img/euro.png" class="figure-img img-fluid rounded" alt="..." >
+                    <img src="public/img/euro.jpg" class="figure-img img-fluid rounded" alt="..." >
                 {%endif%}
 
               <figcaption class="figure-caption text-right"></figcaption>
@@ -37,13 +37,13 @@
         <div class="input-group mb-2 p-1">
             <div class="input-group-prepend">
             <span class="input-group-text"><strong>{% if moeda == 'dolar'%} ${%else%} € {%endif%}</strong></span>
-                <input type="text" class="form-control-inline" value="1.00" id="real" pattern="[0-9]+$" size="10.8"  required="required">
+                <input type="text" class="form-control" value="1.00" id="real" pattern="[0-9]+$" size="10.8"  required="required">
             </div>
         </div>
         <div class="input-group mb-2 p-1">
             <div class="input-group-prepend">
             <span class="input-group-text"><strong>R$</strong></span>
-                <input type="text" class="form-control-inline" value="{{ dolar }}" id="valor" pattern="[0-9]+$" size="9"  required="required">
+                <input type="text" class="form-control" value="{{ dolar }}" id="valor" pattern="[0-9]+$" size="9"  required="required">
             </div>
         </div>
         <input type="hidden" id="orig" value="{{ dolar }}">
