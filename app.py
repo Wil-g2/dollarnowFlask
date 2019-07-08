@@ -12,13 +12,13 @@ def index():
 def dolar():
     req = requests.get('https://economia.awesomeapi.com.br/USD-BRL/');
     data = req.json()
-    return render_template('base.html', dolar = data[0]['ask'], moeda = 'dolar')
+    return render_template('base.html', dolar = round(float(data[0]['ask']),2), moeda = 'dolar')
 
 @app.route('/euro', methods = ['GET','POST'])
 def euro():
     req = requests.get('https://economia.awesomeapi.com.br/EUR-BRL/');
     data = req.json()
-    return render_template('base.html', dolar = data[0]['ask'], moeda = 'euro')
+    return render_template('base.html', dolar = round(float(data[0]['ask']),2), moeda = 'euro')
 
 if __name__ == '__main__':
    app.run(debug = True)

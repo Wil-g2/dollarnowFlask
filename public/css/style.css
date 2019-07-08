@@ -1,14 +1,9 @@
 /*body {
   background-color: #fefbd8;
 }*/
-input{
-    border-radius: 15px;
-    border-color:#fefbd8;
-    font-family: verdana;
-    font-size: 2em;
-}
 
-label{
+input, span{
+    border-color:#fefbd8;
     font-family: verdana;
     font-size: 2em;
 }

@@ -34,11 +34,18 @@
         </div>
     </div>
     <div class="col-md-6 offset-md-4 col-xs-12 col-sm-8 offset-sm-4">
-        <label class="p-1"><strong>{% if moeda == 'dolar'%}$ {%else%}€ {%endif%}</strong></label>
-        <input type="text"  value="1,00" id="real" size="5">
-         <label> <strong>Vale </strong>
-        <strong>R$ </strong> </label>
-        <input type="text" value="{{ dolar }}" id="valor" size="5">
+        <div class="input-group mb-2 p-1">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><strong>{% if moeda == 'dolar'%} ${%else%} € {%endif%}</strong></span>
+                <input type="text" class="form-control-inline" value="1.00" id="real" pattern="[0-9]+$" size="10.8"  required="required">
+            </div>
+        </div>
+        <div class="input-group mb-2 p-1">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><strong>R$</strong></span>
+                <input type="text" class="form-control-inline" value="{{ dolar }}" id="valor" pattern="[0-9]+$" size="9"  required="required">
+            </div>
+        </div>
         <input type="hidden" id="orig" value="{{ dolar }}">
     </div>
 </div>
